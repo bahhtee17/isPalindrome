@@ -10,6 +10,7 @@ const Input = () => {
     const dispatch = useDispatch()
     const trueValue = useSelector(state => state.trueValue.trueValue)
     const falseValue = useSelector(state => state.falseValue.falseValue)
+
     const [value, setValue] = useState("")
 
 
@@ -30,13 +31,14 @@ const Input = () => {
 
 
     const addItemsHandler = () => {
-        for (let i = 0; i <= value.length; i += 1) {
+        for (let i = 0; i < value.length; i += 1) {
             if (value[i] !== value[value.length - 1 - i]) {
-                return dispatch({ type: "ADD_FALSE_ITEM", payload: value })
+                //return dispatch({ type: "ADD_FALSE_ITEM", payload: value })
+                return false
             }
         }
 
-        dispatch({ type: "ADD_TRUE_ITEM", payload: value })
+        return dispatch({ type: "ADD_TRUE_ITEM", payload: value })
 
     }
 
@@ -48,14 +50,18 @@ const Input = () => {
 
 
     return (
-        <div>
+        <div className={classes.container}>
             <form onSubmit={submitHandler} className={classes.container}>
-                <input onChange={onChangeHandler} className={classes.input} type="text" placeholder='Add a word or sentence' />
+                <input value={value} onChange={onChangeHandler} className={classes.input} type="text" placeholder='Add a word or sentence with palindrome' />
                 <button type='submit' className={classes.submit}>Submit</button>
             </form>
-            <div className={classes.container}>
-                {trueValue.map((tvalue, i) => { return <Item exTrue={tvalue} id={i} /> })}
-                {falseValue.map((fvalue, i) => { return <Item exFalse={fvalue} id={i} /> })}
+            <div className={classes.container2}>
+
+                <div style={{ color: "#1fe9e5" }}>
+                    {trueValue.map((tvalue, i) => { return <Item exTrue={tvalue} id={i} /> })}
+                </div>
+
+
             </div>
 
         </div>

@@ -1,5 +1,6 @@
 const defaultValue = {
-    trueValue: ["anna"]
+    trueValue: ["true"],
+    id: Math.random()
 }
 
 
