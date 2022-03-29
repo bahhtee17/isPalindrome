@@ -1,0 +1,41 @@
+.container{
+    display:flex;
+    justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 15vh;
+width: 100%;
+}
+
+.input{
+
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+
+border: none;
+    width: 50%;
+    height: 5vh;
+background: none;
+border-bottom: 1px solid gray;
+outline: none;
+color:#1fe9e5
+}
+::-webkit-input-placeholder{
+    color: #1fe9e5;
+}
+
+.submit{
+    font-size: large;
+    margin-top: 20px;
+    width: 10rem;
+    height: 3vh;
+    background-color: #1fe9e5;
+    color:#1e243b;
+    cursor:pointer;
+}
+
+.submit:hover{
+    background-color: #05fdf9;
+}
+
