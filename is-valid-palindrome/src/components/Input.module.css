@@ -33,9 +33,21 @@ color:#1fe9e5
     background-color: #1fe9e5;
     color:#1e243b;
     cursor:pointer;
+    border: none;
+    outline: none;
 }
 
 .submit:hover{
     background-color: #05fdf9;
+    border: none;
+    outline: none;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
+
+}

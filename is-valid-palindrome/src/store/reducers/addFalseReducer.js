@@ -1,5 +1,5 @@
 const defaultValue = {
-    falseValue: []
+    falseValue: ["false"]
 }
 
 

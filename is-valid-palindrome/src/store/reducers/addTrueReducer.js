@@ -1,5 +1,5 @@
 const defaultValue = {
-    trueValue: []
+    trueValue: ["anna"]
 }
 
 
