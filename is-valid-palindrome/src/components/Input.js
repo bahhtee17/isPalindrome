@@ -12,13 +12,9 @@ const Input = () => {
     console.log(falseValue)
     const submitHandler = (e) => {
         e.preventDefault();
-        setValue([...value, { trueValue, falseValue }])
-
-
     }
     const onChangeHandler = (e) => {
         setValue(e.target.value)
-
     }
 
 
